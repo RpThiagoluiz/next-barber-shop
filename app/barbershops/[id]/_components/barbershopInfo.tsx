@@ -17,7 +17,7 @@ export const BarbershopInfo = ({ barbershop }: BarbershopInfoProps) => {
   return (
     <>
       <section className="h-[250px] w-full relative">
-        <Button size='icon' variant='outline' className="z-50 absolute top-4 left-4" onClick={router.back}><ChevronLeftIcon /></Button>
+        <Button size='icon' variant='outline' className="z-50 absolute top-4 left-4" onClick={() => router.replace('/')}><ChevronLeftIcon /></Button>
         <Button size='icon' variant='outline' className="z-50 absolute top-4 right-4"><MenuIcon /></Button>
         <Image
           className="opacity-75"
