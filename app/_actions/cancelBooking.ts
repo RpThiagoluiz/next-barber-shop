@@ -10,6 +10,7 @@ export const cancelBooking = async (bookingId: string) => {
     },
   });
 
+  // Quando houver uma ação ele realizar o refetch das informações. Ou seja, remove o cache
   revalidatePath("/");
   revalidatePath("/bookings");
 };
