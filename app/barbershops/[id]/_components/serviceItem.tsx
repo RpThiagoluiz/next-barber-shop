@@ -10,7 +10,7 @@ import { signIn, useSession } from 'next-auth/react'
 import Image from 'next/image'
 import { useEffect, useMemo, useState } from 'react'
 import { generateDayTimeList } from '../_helpers/hours'
-import { format, setHours, setMinutes } from 'date-fns'
+import { addDays, format, setHours, setMinutes } from 'date-fns'
 import { saveBooking } from '../_actions/saveBocking'
 import { Loader2 } from 'lucide-react'
 import { toast } from 'sonner'
@@ -168,7 +168,7 @@ export const ServiceItem = ({ barberShop, service, isAuthenticated }: ServiceIte
                         setHour(undefined)
                       }}
                       locale={ptBR}
-                      fromDate={new Date()}
+                      fromDate={addDays(new Date(), 1)}
                       className='mt-6'
                       styles={{
                         head_cell: {
